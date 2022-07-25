@@ -1,18 +1,32 @@
-# **Wav2Lip**: *Accurately Lip-syncing Videos In The Wild*
+# **Wav2Lip**: Обучение модели генерации движения губ
 
-For commercial requests, please contact us at radrabha.m@research.iiit.ac.in or prajwal.k@research.iiit.ac.in. We have an HD model ready that can be used commercially.
+В репозитории собран материал про быстрому запуску обучения модели Wav2Lip.
 
-This code is part of the paper: _A Lip Sync Expert Is All You Need for Speech to Lip Generation In the Wild_ published at ACM Multimedia 2020. 
+Модель позволяет на основе входного изображения или видео человека, а также аудиофайла речи того же или любого другого человека получить сгенерированное гибридное видео.
 
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/a-lip-sync-expert-is-all-you-need-for-speech/lip-sync-on-lrs2)](https://paperswithcode.com/sota/lip-sync-on-lrs2?p=a-lip-sync-expert-is-all-you-need-for-speech)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/a-lip-sync-expert-is-all-you-need-for-speech/lip-sync-on-lrs3)](https://paperswithcode.com/sota/lip-sync-on-lrs3?p=a-lip-sync-expert-is-all-you-need-for-speech)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/a-lip-sync-expert-is-all-you-need-for-speech/lip-sync-on-lrw)](https://paperswithcode.com/sota/lip-sync-on-lrw?p=a-lip-sync-expert-is-all-you-need-for-speech)
+Таким образом, можно сделать так, что любой человек будет говорить любую речь, содержащуюся во входном аудиофайле, и при этом движения его губ будут соответствовать тому, что он говорит.
 
-|📑 Original Paper|📰 Project Page|🌀 Demo|⚡ Live Testing|📔 Colab Notebook
-|:-:|:-:|:-:|:-:|:-:|
-[Paper](http://arxiv.org/abs/2008.10010) | [Project Page](http://cvit.iiit.ac.in/research/projects/cvit-projects/a-lip-sync-expert-is-all-you-need-for-speech-to-lip-generation-in-the-wild/) | [Demo Video](https://youtu.be/0fXaDCZNOJc) | [Interactive Demo](https://bhaasha.iiit.ac.in/lipsync) | [Colab Notebook](https://colab.research.google.com/drive/1tZpDWXz49W6wDcTprANRGLo2D_EbD5J8?usp=sharing) /[Updated Collab Notebook](https://colab.research.google.com/drive/1IjFW1cLevs6Ouyu4Yht4mnR4yeuMqO7Y#scrollTo=MH1m608OymLH)
+Выполнено на основе репозитория:
+[Wav2Lip](https://github.com/Rudrabha/Wav2Lip.git)
 
- <img src="https://drive.google.com/uc?export=view&id=1Wn0hPmpo4GRbCIJR8Tf20Akzdi1qjjG9"/>
+# Обучение
+## Требования к компьютеру
+
+## Установка
+### В Windows
+1. Скачайте репозиторий: git clone https://github.com/uralskayamariya/Wav2Lip_training_quick_start.git
+1. Отредактируйте последнюю строку в файл Wav2Lip.yml, который лежит в корне скачанного репозитория.
+![image](https://user-images.githubusercontent.com/86780783/180801441-460162d3-8aae-4dac-9fed-1db042315a54.png)
+Здесь нужно указать путь, по которому Anaconda создает виртуальные среды на Вашем компьютере.
+1. Откройте командную строку Anaconda
+2. Загрузка виртуальной среды Anaconda: conda env create --force -f project_environment.yml
+
+
+
+## Подготовка данных
+В качестве входных данных для обучения модели являются:
+1. изображения лиц людей, вырезанные последовательно из видео говорящего человека
+2. звуковой файл, соответствующий движению губ, вырезанный из видео говорящего человека.
 
 ----------
 **Highlights**
