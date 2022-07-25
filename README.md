@@ -22,11 +22,11 @@
   ![image](https://user-images.githubusercontent.com/86780783/180801441-460162d3-8aae-4dac-9fed-1db042315a54.png)
   Здесь нужно указать путь, по которому Anaconda создает виртуальные среды на Вашем компьютере.
 3. Откройте командную строку Anaconda
-4. Загрузите виртуальную среду Anaconda: conda env create --force -f Wav2Lip.yml
+4. Установите виртуальную среду Anaconda с помощью команды: conda env create --force -f Wav2Lip.yml
 5. Скачайте библиотеку ffmpeg отсюда: 
-https://github.com/BtbN/FFmpeg-Builds/releases
-Скачать нужно файл: ffmpeg-n5.0-latest-win64-gpl-5.0.zip
-Распакуйте данный архив и добавьте путь к папке ffmpeg-n5.0-latest-win64-gpl-5.0/bin в системный и в пользовательский path переменных среды Windows.
+  https://github.com/BtbN/FFmpeg-Builds/releases
+  Скачать нужно файл: ffmpeg-n5.0-latest-win64-gpl-5.0.zip
+  Распакуйте данный архив и добавьте путь к папке ffmpeg-n5.0-latest-win64-gpl-5.0/bin в системный и в пользовательский path переменных среды Windows.
 
 
 
