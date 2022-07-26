@@ -118,13 +118,13 @@ dependencies:
     - tensorflow-gpu==2.6.2
     - termcolor==1.1.0
     - threadpoolctl==3.1.0
-    - torch==1.7.1+cu110
+    - torch==1.7.1+cu110 -f https://download.pytorch.org/whl/cu110/torch_stable.html
     - torchaudio==0.7.2
-    - torchvision==0.8.2+cu110
+    - torchvision==0.8.2+cu110 -f https://download.pytorch.org/whl/cu110/torch_stable.html
     - tqdm==4.45.0
     - typing-extensions==3.7.4.3
     - urllib3==1.26.10
     - werkzeug==2.0.3
     - wrapt==1.12.1
     - zipp==3.6.0
-prefix: C:\ProgramData\Anaconda3\envs\Wav2Lip
+prefix: c:\Users\ir\anaconda3\envs\
