@@ -11,15 +11,16 @@
 
 # Обучение
 ## Требования к компьютеру
-- Репозиторий работает в Windows 10.
-- На компьютере должна быть установлена видеокарта с памятью графического процессора более 8 Гб и Nvidia Cuda Toolkit 11.x.
-<br>... Это будет заполнено позже.
+Репозиторий протестирован на:
+- Windows 10
+- Видеокартах Nvidia RTX 2080 Super, Nvidia RTX 3060.
+- Cuda Toolkit 11.x
 
 ## Установка
 ### В Windows
 1. Скачайте репозиторий: git clone https://github.com/uralskayamariya/Wav2Lip_training_quick_start.git
 3. Отредактируйте последнюю строку в файле готовой среды Anaconda Wav2Lip.yml, который лежит в корне скачаного репозитория:
-  ![image](https://user-images.githubusercontent.com/86780783/180801441-460162d3-8aae-4dac-9fed-1db042315a54.png)
+  <br>![image](https://user-images.githubusercontent.com/86780783/180801441-460162d3-8aae-4dac-9fed-1db042315a54.png)
   <br>Здесь нужно указать путь, по которому Anaconda создает виртуальные среды на Вашем компьютере.
 3. Откройте командную строку Anaconda
 4. Установите виртуальную среду Anaconda с помощью команды: conda env create --force -f Wav2Lip.yml
@@ -36,9 +37,16 @@
     - [Expert Discriminator](https://iiitaphyd-my.sharepoint.com/:u:/g/personal/radrabha_m_research_iiit_ac_in/EQRvmiZg-HRAjvI6zqN9eTEBP74KefynCwPWVmF57l-AYA?e=ZRPHKP)
     - [Visual Quality Discriminator](https://iiitaphyd-my.sharepoint.com/:u:/g/personal/radrabha_m_research_iiit_ac_in/EQVqH88dTm1HjlK11eNba5gBbn15WMS0B0EZbDBttqrqkg?e=ic0ljo)
 
+Для установки пакетов без Anaconda воспользуйтесь следующей инструкцией:
+
 
 ### В Google Colab
-... Это будет заполнено позже.
+Все действия по установке выполняются аналогично Windows.
+
+Для установки пакетов без Anaconda воспользуйтесь следующей инструкцией:
+1. pip uninstall tensorflow tensorflow-gpu
+2. cd Wav2Lip && pip install -r requirements.txt
+3. 
 
 
 ## Подготовка данных
@@ -78,3 +86,9 @@
 ### Обучение дискриминатора
 
 ### Обучение генератора
+
+## Инференс
+Для инференса откройте командную строку и или ноутбук и воспользуйтесь следующими командами:
+<br>python inference.py --checkpoint_path checkpoints/wav2lip_gan.pth --face "путь к видеофайлу или изображению" --audio "путь к аудиофайлу"
+<br>Например: python inference.py --checkpoint_path checkpoints/wav2lip_gan.pth --face "sample_data/480p.mp4" --audio "sample_data/audio.wav"
+<br>На выходе получим входное видео говорящего человека со звуком из аудиофайла. При этом движения губ говорящего человека будут соответствовать речи из аудиофайла.
