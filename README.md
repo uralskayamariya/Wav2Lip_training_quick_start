@@ -39,31 +39,36 @@
 #### Самостоятельная установка виртуальной среды Anaconda
 1. Откройте командную строку Anaconda
 2. Создайте виртуальную среду Anaconda:
-  conda create -n Wav2Lip python=3.8
+  <br>conda create -n Wav2Lip python=3.8
 3. Активируйте созданную среду:
-  conda activate Wav2Lip
+  <br>conda activate Wav2Lip
 4. В командной строке Anaconda перейдите в скачанный репозиторий:
-  cd Wav2Lip_training_quick_start
+  <br>cd Wav2Lip_training_quick_start
 6. Установите необходимые библиотеки:
-  pip install -r requirements_win.txt
+  <br>pip install -r requirements_win.txt
 7. Установите PyTorch:
-  pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
+  <br>pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
   
 ### Установка в Google Colab
 1. В управлении средами подключите аппаратный ускоритель GPU.
 2. Подключите свой Google Drive:
-    from google.colab import drive
-    drive.mount('/content/drive')
+    <br>from google.colab import drive
+    <br>drive.mount('/content/drive')
 3. Перейдите в корневую папку своего диска:
-    %cd /content/drive/My Drive
+    <br>%cd /content/drive/My Drive
 4. Скопируйте данный репозиторий:
-    !git clone [https://github.com/uralskayamariya/Wav2Lip_training_quick_start.git]
+    <br>!git clone https://github.com/uralskayamariya/Wav2Lip_training_quick_start.git
 5. Удалите tensorflow:
-    !pip uninstall tensorflow tensorflow-gpu
+    <br>!pip uninstall tensorflow tensorflow-gpu
 7. Перейдите в скачанный репозиторий и установите дополнительные пакеты:
-    !cd Wav2Lip_training_quick_start && pip install -r requirements.txt
+    <br>!cd Wav2Lip_training_quick_start && pip install -r requirements.txt
 8. Скачайте модель для детектирования лиц:
-    !wget "https://www.adrianbulat.com/downloads/python-fan/s3fd-619a316812.pth" -O "Wav2Lip_training_quick_start/face_detection/detection/sfd/s3fd.pth"
+    <br>!wget "https://www.adrianbulat.com/downloads/python-fan/s3fd-619a316812.pth" -O "Wav2Lip_training_quick_start/face_detection/detection/sfd/s3fd.pth"
+9. Скачайте предобученные модели для обучения и инференса:
+    <br>!wget "https://iiitaphyd-my.sharepoint.com/:u:/g/personal/radrabha_m_research_iiit_ac_in/Eb3LEzbfuKlJiR600lQWRxgBIY27JZg80f7V9jtMfbNDaQ?e=TBFBVW" -O "Wav2Lip_training_quick_start/models/wav2lip.pth"
+    <br>!wget "https://iiitaphyd-my.sharepoint.com/:u:/g/personal/radrabha_m_research_iiit_ac_in/EdjI7bZlgApMqsVoEUUXpLsBxqXbn5z8VTmoxp55YNDcIA?e=n9ljGW" -O "Wav2Lip_training_quick_start/models/wav2lip_gan.pth"
+    <br>!wget "https://iiitaphyd-my.sharepoint.com/:u:/g/personal/radrabha_m_research_iiit_ac_in/EQRvmiZg-HRAjvI6zqN9eTEBP74KefynCwPWVmF57l-AYA?e=ZRPHKP" -O "Wav2Lip_training_quick_start/models/lipsync_expert.pth"
+    <br>!wget "https://iiitaphyd-my.sharepoint.com/:u:/g/personal/radrabha_m_research_iiit_ac_in/EQVqH88dTm1HjlK11eNba5gBbn15WMS0B0EZbDBttqrqkg?e=ic0ljo" -O "Wav2Lip_training_quick_start/models/visual_quality_disc.pth"
 
 ## Подготовка данных
 В качестве входных данных для обучения модели требуются:
